@@ -50,7 +50,7 @@ def visualize(theta):
     line_y = theta[0] + line_x * theta[1]
     ax.plot(line_x, line_y)
     plt.show()
-        
+
 theta, J_history = fit_with_cost(X, y, theta, alpha, num_iters)
 visualize(theta)
 
@@ -58,7 +58,3 @@ fig = plt.figure()
 ax = plt.axes()
 ax.plot(J_history)
         
-            
-
-
-

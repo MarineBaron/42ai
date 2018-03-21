@@ -6,13 +6,17 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import normalize
 
 data = pd.read_csv("ex1data2.csv")
+data.plot.scatter('size','price')
+data.plot.scatter('nb_bedrooms','price')
+fig = plt.figure()
+ax = plt.axes()
 X = data[['size', 'nb_bedrooms']]
 X.insert(0, 'const', 1, 1)
 y = data['price']
 theta = np.zeros(3)
 theta.fill(1)
 alpha = 0.01
-num_iters = 10000
+num_iters = 1500
 
 def predict(X, theta):
     return X.dot(theta)
